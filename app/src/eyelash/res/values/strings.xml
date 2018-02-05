@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="res_name">01</string>
+    <string name="res_pkg_name">com.jb.zcamera.extra.makeupeditor.eyelash1</string>
+
+    <string name="left_ctrl_points">69,109,173,127,120,85,117,127,91,90,89,122,152,96,146,127</string>
+    <string name="left_ref_point_indexes">1,2,3,4,5,6,7,8</string>
+
+    <string name="right_ctrl_points">35,127,145,107,91,83,97,127,61,95,65,127,122,89,133,121</string>
+    <string name="right_ref_point_indexes">10,11,12,13,14,15,16,17</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="makeup_type">6</integer>
+    <integer name="res_version">1</integer>
+
+    <integer name="effect_color_r">185</integer>
+    <integer name="effect_color_g">88</integer>
+    <integer name="effect_color_b">91</integer>
+    <integer name="effect_color_a">255</integer>
+
+</resources>

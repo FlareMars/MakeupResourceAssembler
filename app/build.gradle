@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        foundation {
+            applicationId "com.jb.zcamera.extra.makeupeditor.foundation2"
+        }
+
+        blush {
+            applicationId "com.jb.zcamera.extra.makeupeditor.blush1"
+        }
+
+        lip {
+            applicationId "com.jb.zcamera.extra.makeupeditor.lip1"
+        }
+
+        eyeliner {
+            applicationId "com.jb.zcamera.extra.makeupeditor.eyeliner1"
+        }
+
+        eyeshadow {
+            applicationId "com.jb.zcamera.extra.makeupeditor.eyeshadow1"
+        }
+
+        eyelash {
+            applicationId "com.jb.zcamera.extra.makeupeditor.eyelash1"
+        }
+
+        eyebrow {
+            applicationId "com.jb.zcamera.extra.makeupeditor.eyebrow1"
+        }
+
+        eyepupil {
+            applicationId "com.jb.zcamera.extra.makeupeditor.eyepupil1"
+        }
+
+        deyelid {
+            applicationId "com.jb.zcamera.extra.makeupeditor.deyelid1"
+        }
+
+        facepaint {
+            applicationId "com.jb.zcamera.extra.makeupeditor.facepaint1"
+        }
+
+        looks {
+            applicationId "com.jb.zcamera.extra.makeupeditor.looks1"
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each  { output ->
+            def outputFile = output.outputFile
+            def fileName = "${defaultConfig.applicationId}.zip"
+            output.outputFile = new File(outputFile.parent, fileName)
+        }
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
